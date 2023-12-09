@@ -80,3 +80,31 @@ function clearBoard() {
 
 // Adiciona um ouvinte de evento de clique ao botão de limpar
 clearButton.addEventListener('click', clearBoard);
+
+// Criação do botão para cores aleatórias
+const randomColorButton = document.createElement('button');
+randomColorButton.id = 'button-random-color';
+randomColorButton.textContent = 'Cores aleatórias';
+
+// Insere o botão entre a paleta de cores e o quadro de pixels
+main.insertBefore(randomColorButton, createSection);
+
+// Função para gerar cores aleatórias
+function getRandomColor() {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let index = 0; index < 6; index += 1) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+// Função para aplicar cores aleatórias à paleta
+function generateRandomColors() {
+  colors.forEach((color) => {
+    color.style.backgroundColor = getRandomColor();
+  });
+}
+
+// Adiciona um ouvinte de evento de clique ao botão de cores aleatórias
+randomColorButton.addEventListener('click', generateRandomColors);
