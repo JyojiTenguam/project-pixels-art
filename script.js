@@ -58,3 +58,25 @@ const pixels = document.querySelectorAll('.pixel');
 pixels.forEach((pixel) => {
   pixel.addEventListener('click', fillPixel);
 });
+
+// Criação do botão
+const clearButton = document.createElement('button');
+clearButton.id = 'clear-board';
+clearButton.textContent = 'Limpar';
+
+// Insere o botão entre a paleta de cores e o quadro de pixels
+main.insertBefore(clearButton, createSection);
+
+// Função para limpar o quadro
+function clearBoard() {
+  // Obtém todos os pixels na grade
+  const allPixels = document.querySelectorAll('.pixel');
+
+  // Define a cor de fundo de todos os pixels como branco
+  allPixels.forEach((pixel) => {
+    pixel.style.backgroundColor = 'white';
+  });
+}
+
+// Adiciona um ouvinte de evento de clique ao botão de limpar
+clearButton.addEventListener('click', clearBoard);
