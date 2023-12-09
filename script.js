@@ -108,3 +108,40 @@ function generateRandomColors() {
 
 // Adiciona um ouvinte de evento de clique ao botão de cores aleatórias
 randomColorButton.addEventListener('click', generateRandomColors);
+
+// Função para preencher um pixel com a cor selecionada e salvar no localStorage
+function fillPixels(event) {
+  // Obtém a cor selecionada na paleta
+  const selectedColor = document.querySelector('.color.selected');
+
+  // Verifica se uma cor foi selecionada
+  if (selectedColor) {
+    // Obtém a cor de fundo da cor selecionada
+    const backgroundColor = selectBackground(selectedColor);
+
+    // Aplica a cor de fundo ao pixel clicado
+    event.target.style.backgroundColor = backgroundColor;
+
+    // Salva a cor e a posição no localStorage
+    const pixelIndex = Array.from(pixels).indexOf(event.target);
+    localStorage.setItem(`pixel_${pixelIndex}`, backgroundColor);
+  }
+}
+
+// Função para recuperar o desenho do localStorage ao carregar a página
+function loadSavedPixels() {
+  pixels.forEach((pixel, index) => {
+    const savedColor = localStorage.getItem(`pixel_${index}`);
+    if (savedColor) {
+      pixel.style.backgroundColor = savedColor;
+    }
+  });
+}
+
+// Adiciona um ouvinte de evento de clique a cada pixel na grade
+pixels.forEach((pixel) => {
+  pixel.addEventListener('click', fillPixels);
+});
+
+// Carrega os pixels salvos ao carregar a página
+loadSavedPixels();
