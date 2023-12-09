@@ -37,3 +37,24 @@ function selectBackground(target) {
   const backgroundColors = cssColors.getPropertyValue('background-color');
   return backgroundColors;
 }
+
+// Função para preencher um pixel com a cor selecionada
+function fillPixel(event) {
+  // Obtém a cor selecionada na paleta
+  const selectedColor = document.querySelector('.color.selected');
+
+  // Verifica se uma cor foi selecionada
+  if (selectedColor) {
+    // Obtém a cor de fundo da cor selecionada
+    const backgroundColor = selectBackground(selectedColor);
+
+    // Aplica a cor de fundo ao pixel clicado
+    event.target.style.backgroundColor = backgroundColor;
+  }
+}
+
+// Adiciona um ouvinte de evento de clique a cada pixel na grade
+const pixels = document.querySelectorAll('.pixel');
+pixels.forEach((pixel) => {
+  pixel.addEventListener('click', fillPixel);
+});
