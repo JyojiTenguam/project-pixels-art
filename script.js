@@ -145,6 +145,7 @@ pixels.forEach((pixel) => {
 
 // Carrega os pixels salvos ao carregar a página
 loadSavedPixels();
+<<<<<<< HEAD
 
 // Adiciona um ouvinte de evento de clique ao botão "VQV"
 const generateBoardButton = document.getElementById('generate-board');
@@ -173,3 +174,5 @@ function generateBoard() {
     }
   }
 }
+=======
+>>>>>>> f6d66233138d01d965bcdd1e9aa8a9c734b82372
