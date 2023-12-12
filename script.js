@@ -145,3 +145,31 @@ pixels.forEach((pixel) => {
 
 // Carrega os pixels salvos ao carregar a página
 loadSavedPixels();
+
+// Adiciona um ouvinte de evento de clique ao botão "VQV"
+const generateBoardButton = document.getElementById('generate-board');
+generateBoardButton.addEventListener('click', generateBoard);
+
+// Função para gerar o quadro com base no valor do input
+function generateBoard() {
+  const boardSizeInput = document.getElementById('board-size');
+  const boardSize = parseInt(boardSizeInput.value);
+
+  // Verifica se o valor inserido é válido
+  if (isNaN(boardSize) || boardSize <= 0) {
+    alert('Board inválido!');
+    return;
+  }
+
+  // Limpa o quadro atual
+  createSection.innerHTML = '';
+
+  // Cria o novo quadro
+  for (let row = 0; row < boardSize; row += 1) {
+    for (let col = 0; col < boardSize; col += 1) {
+      const pixel = document.createElement('div');
+      pixel.className = 'pixel';
+      createSection.appendChild(pixel);
+    }
+  }
+}
