@@ -153,16 +153,22 @@ generateBoardButton.addEventListener('click', generateBoard);
 // Função para gerar o quadro com base no valor do input
 function generateBoard() {
   const boardSizeInput = document.getElementById('board-size');
-  const boardSize = parseInt(boardSizeInput.value);
+  let boardSize = parseInt(boardSizeInput.value);
 
   // Verifica se o valor inserido é válido
   if (isNaN(boardSize) || boardSize <= 0) {
-    alert('Board inválido!');
-    return;
+    alert('Board inválido! O tamanho mínimo é 5 pixels.');
+    boardSize = 5; // Define o tamanho padrão como 5 pixels
+  } else if (boardSize > 50) {
+    alert('Board inválido! O tamanho máximo é 50 pixels.');
+    boardSize = 50; // Define o tamanho máximo como 50 pixels
   }
 
   // Limpa o quadro atual
   createSection.innerHTML = '';
+
+  // Limita o tamanho do quadro entre 5 e 50 pixels
+  boardSize = Math.min(Math.max(boardSize, 5), 50);
 
   // Cria o novo quadro
   for (let row = 0; row < boardSize; row += 1) {
