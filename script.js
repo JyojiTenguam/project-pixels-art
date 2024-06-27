@@ -111,20 +111,22 @@ randomColorButton.addEventListener('click', generateRandomColors);
 
 // Função para preencher um pixel com a cor selecionada e salvar no localStorage
 function fillPixels(event) {
-  // Obtém a cor selecionada na paleta
   const selectedColor = document.querySelector('.color.selected');
 
-  // Verifica se uma cor foi selecionada
   if (selectedColor) {
-    // Obtém a cor de fundo da cor selecionada
     const backgroundColor = selectBackground(selectedColor);
 
-    // Aplica a cor de fundo ao pixel clicado
-    event.target.style.backgroundColor = backgroundColor;
+    // Encontra o índice do pixel clicado dentro do array de pixels
+    const pixelIndex = Array.from(pixels).indexOf(event.currentTarget);
 
-    // Salva a cor e a posição no localStorage
-    const pixelIndex = Array.from(pixels).indexOf(event.target);
-    localStorage.setItem(`pixel_${pixelIndex}`, backgroundColor);
+    // Verifica se o índice foi encontrado
+    if (pixelIndex !== -1) {
+      console.log(`Salvando pixel_${pixelIndex}: ${backgroundColor} no localStorage`);
+      localStorage.setItem(`pixel_${pixelIndex}`, backgroundColor);
+      event.currentTarget.style.backgroundColor = backgroundColor;
+    } else {
+      console.error('Índice do pixel não encontrado!');
+    }
   }
 }
 
@@ -142,6 +144,17 @@ function loadSavedPixels() {
 pixels.forEach((pixel) => {
   pixel.addEventListener('click', fillPixels);
 });
+
+function loadBoardSize() {
+  const savedBoardSize = localStorage.getItem('boardSize');
+  console.log('Tamanho do board carregado:', savedBoardSize);
+
+  if (savedBoardSize) {
+    const boardSizeInput = document.getElementById('board-size');
+    boardSizeInput.value = savedBoardSize;
+    generateBoard(); // Chama a função para gerar o quadro com o tamanho salvo
+  }
+}
 
 // Carrega os pixels salvos ao carregar a página
 loadSavedPixels();
@@ -179,3 +192,4 @@ function generateBoard() {
     }
   }
 }
+
