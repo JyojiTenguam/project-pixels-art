@@ -34,13 +34,13 @@ A página desenvolvida apresenta as seguintes características:
 1. Clone este repositório para o seu computador:
 
     ```bash
-    git clone git@github.com:JyojiTenguam/project-arte-com-pixels.git
+    git@github.com:JyojiTenguam/project-pixels-art.git
     ```
 
 2. Navegue até o diretório do projeto:
 
     ```bash
-    cd project-arte-com-pixels
+    cd project-pixels-art
     ```
 
 3. Abra o arquivo `index.html` em seu navegador para visualizar o projeto.
