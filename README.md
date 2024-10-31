@@ -28,3 +28,30 @@ A página desenvolvida apresenta as seguintes características:
 
 - **Input de Tamanho**: O usuário pode especificar um novo tamanho para o quadro de pixels.
 - **Limitação de Tamanho**: O quadro não pode ter menos de 5 ou mais de 50 pixels.
+
+## Instruções de Instalação e Uso
+
+1. **Faça um Fork do Repositório**:
+   - No GitHub, acesse o [repositório original do projeto](https://github.com/JyojiTenguam/project-pixels-art) e clique no botão **"Fork"** no canto superior direito para criar uma cópia do projeto na sua conta.
+
+2. **Clone o Repositório Forkado**:
+   - Após fazer o fork, clone o repositório para o seu computador:
+
+    ```bash
+    git clone git@github.com:seu-usuario/project-pixels-art.git
+    ```
+
+3. **Navegue até o Diretório do Projeto**:
+
+    ```bash
+    cd project-pixels-art
+    ```
+
+4. **Instale as Dependências**:
+
+    ```bash
+    npm install
+    ```
+
+5. **Visualize o Projeto**:
+   - Abra o arquivo `index.html` em seu navegador para visualizar o projeto.
