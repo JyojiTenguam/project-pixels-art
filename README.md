@@ -1,59 +1,59 @@
-# Projeto Arte com Pixels
+# 🎨 Pixel Art
 
-Este projeto foi desenvolvido como parte do curso da Trybe, com o objetivo de criar uma paleta de cores interativa e um quadro de pixels onde o usuário pode desenhar. A seguir, você encontrará informações sobre como configurar e executar o projeto, bem como detalhes sobre as funcionalidades implementadas.
+Projeto desenvolvido como parte do curso da Trybe, com o objetivo de criar uma aplicação web interativa que simula um quadro de pintura em pixels. O foco principal foi aplicar conceitos de manipulação de DOM, lógica em JavaScript e boas práticas de estruturação com HTML e CSS.
 
-## Tecnologias Utilizadas
+## ✨ Demonstração
 
-- JavaScript
-- HTML
-- CSS
+> Este projeto permite pintar pixels com diferentes cores escolhidas de uma paleta, além de limpar o quadro a qualquer momento.
 
-## Funcionalidades do Projeto
+## 📋 Índice
 
-A página desenvolvida apresenta as seguintes características:
+- [Sobre](#-sobre)
+- [Habilidades desenvolvidas](#-habilidades-desenvolvidas)
+- [Tecnologias utilizadas](#-tecnologias-utilizadas)
+- [Como rodar o projeto](#-como-rodar-o-projeto)
+- [Autor](#-autor)
 
-1. **Título da Página**: A página contém o título "Paleta de Cores".
-2. **Paleta de Cores**: Inclui uma paleta com quatro cores distintas.
-3. **Quadro de Pixels**: Um quadro de 25 pixels (5x5) onde cada pixel possui 40px de largura e altura, delimitado por uma borda preta de 1px.
-4. **Seleção de Cores**: Permite ao usuário selecionar uma cor da paleta.
-5. **Preenchimento de Pixels**: O usuário pode preencher um pixel do quadro com a cor selecionada.
-6. **Limpar Quadro**: Um botão que limpa o quadro preenchendo todos os pixels com branco.
-7. **Gerar Cores Aleatórias**: Um botão que gera quatro cores aleatórias para a paleta.
-8. **Salvar e Recuperar Desenho**: O quadro é salvo no localStorage para que o desenho atual permaneça ao recarregar a página.
-9. **Input para Tamanho do Quadro**: Permite que o usuário defina o tamanho do quadro de pixels.
-10. **Limitação de Tamanho do Quadro**: Limita o tamanho mínimo e máximo do quadro de pixels.
-11. **Manter Tamanho do Quadro**: O tamanho do quadro é mantido ao recarregar a página usando localStorage.
+## 💡 Sobre
 
-### Requisitos Bônus
+O **Pixel Art** é uma aplicação que simula um quadro de arte digital com pixels. O usuário pode selecionar uma cor da paleta e clicar nos quadrados para pintá-los. Também é possível limpar o quadro usando um botão dedicado.
 
-- **Input de Tamanho**: O usuário pode especificar um novo tamanho para o quadro de pixels.
-- **Limitação de Tamanho**: O quadro não pode ter menos de 5 ou mais de 50 pixels.
+O projeto foi desenvolvido utilizando apenas HTML, CSS e JavaScript puro, sem bibliotecas externas, reforçando a prática da lógica de programação e interação com elementos da interface.
 
-## Instruções de Instalação e Uso
+## 🛠️ Habilidades desenvolvidas
 
-1. **Faça um Fork do Repositório**:
-   - No GitHub, acesse o [repositório original do projeto](https://github.com/JyojiTenguam/project-pixels-art) e clique no botão **"Fork"** no canto superior direito para criar uma cópia do projeto na sua conta.
+- Manipulação da DOM com JavaScript
+- Criação dinâmica de elementos
+- Implementação de eventos de clique e seleção
+- Aplicação de estilos com CSS
+- Organização semântica de uma estrutura HTML
 
-2. **Clone o Repositório Forkado**:
-   - Após fazer o fork, clone o repositório para o seu computador:
+## 🧪 Tecnologias utilizadas
 
-    ```bash
-    git clone git@github.com:seu-usuario/project-pixels-art.git
-    ```
+- HTML5
+- CSS3
+- JavaScript (Vanilla)
 
-3. **Navegue até o Diretório do Projeto**:
+## 🚀 Como rodar o projeto
 
-    ```bash
-    cd project-pixels-art
-    ```
+1. Clone o repositório:
 
-4. **Instale as Dependências**:
+```bash
+git clone https://github.com/JyojiTenguam/project-pixels-art.git
+```
 
-    ```bash
-    npm install
-    ```
+2. Acesse a pasta do projeto
 
-5. **Visualize o Projeto**:
-   - Abra o arquivo `index.html` em seu navegador para visualizar o projeto.
+```bash
+cd project-pixels-art
+```
 
-Lembre-se de substituir `"seu-usuario"` pelo seu nome de usuário no GitHub para que o link do fork seja correto.
+3. Instale as dependências
+
+```bash
+npm install
+```
+
+## 👤 Autor
+
+Este projeto foi desenvolvido como parte do curso de Desenvolvimento Web da Trybe, por Jyoji Tenguam.
